@@ -7,7 +7,18 @@ from app.services.util import generate_unique_id, date_lower_than_today_error, e
 
 
 # TODO: Implement Reminder class here
-aa
+@dataclass
+class Reminder:
+    EMAIL:str ='email'
+    
+    SYSTEM:str ='system' 
+    
+    date_time : datetime
+
+    type:str= "EMAIL"
+
+    def __str__(self):
+        return f"Recordar {self.date_time} de {self.type}"
 
 
 # TODO: Implement Event class here
